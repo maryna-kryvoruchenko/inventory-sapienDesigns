@@ -1,0 +1,31 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+h1, h2 {
+    text-align: center;
+}
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.item {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.category-image {
+    width: 100%;
+    border-radius: 10px;
+}
+h6 a {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+h6 a:hover {
+    text-decoration: underline;
+}
+h6 {
+    text-align: center;
+}
