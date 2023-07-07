@@ -46,3 +46,15 @@ h6 {
 .item-price {
     text-align: center;
 }
+.detail-box {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 10px;
+}
+.detail-box img {
+    border-radius: 10px;
+    width: 70%;
+}
