@@ -17,19 +17,109 @@
         <h1>Sapien Designs Inventory</h1>
     </header>
     <main>
-        <div class="detail-box">
-            <img src="../images/Godox VL300 300W LED Video Light.png" class="detail-image" alt="">
-            <h3>Godox VL300 300W LED Video Light</h3>
-            <p>
-                Price: $499.00<br>
-                Where: Adorama<br>
-                Purchase date: 11/30/2020<br>
-            </p>
-            <input class="submit-button" type="submit" value="Add to Cart">
-        </div>
+        <div class="slideshow-container detail-box">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/1.jpg">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/2.jpg">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/3.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/4.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/5.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/6.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/7.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/8.jpg">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="detail-image" src="../images/Godox VL300 300W LED Video Light/9.jpg">
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+                <span class="dot" onclick="currentSlide(7)"></span> 
+                <span class="dot" onclick="currentSlide(8)"></span> 
+                <span class="dot" onclick="currentSlide(9)"></span> 
+              </div>
+
+              <h3>Godox VL300 300W LED Video Light</h3>
+                <p>
+                    Price: $499.00<br>
+                    Where: Adorama<br>
+                    Purchase date: 11/30/2020<br>
+                </p>
+              <input class="submit-button" type="submit" value="Add to Cart">
+            </div>
+
     </main>
     <footer>
         &copy; Maryna Quinones
     </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
 </body>
 </html>
